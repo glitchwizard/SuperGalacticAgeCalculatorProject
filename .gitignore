@@ -4,3 +4,4 @@ dist/
 *.sqlite-journal
 *.sqlite
 *.suo
+/src/~$SpecSpreadsheet.xlsx

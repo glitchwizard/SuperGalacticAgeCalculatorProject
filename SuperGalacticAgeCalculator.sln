@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SuperGalacticAgeCalculator", "SuperGalacticAgeCalculator.njsproj", "{BF9FB91C-BF78-4781-B845-C76F01640FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF9FB91C-BF78-4781-B845-C76F01640FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9FB91C-BF78-4781-B845-C76F01640FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9FB91C-BF78-4781-B845-C76F01640FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9FB91C-BF78-4781-B845-C76F01640FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {367B94BB-0162-4E39-A883-3DA95E73995E}
+	EndGlobalSection
+EndGlobal

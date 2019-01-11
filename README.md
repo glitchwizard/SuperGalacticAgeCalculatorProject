@@ -24,7 +24,7 @@ This is a calculator that can calculate your galactic age in the solar system, b
 
 ## Planning
 
-1. Configuration/dependencies
+#### 1. Configuration/dependencies
 *  "Development Dependencies":
   -  "babel-core": "^6.26.0",
   -  "babel-loader": "^7.1.3",
@@ -55,90 +55,42 @@ This is a calculator that can calculate your galactic age in the solar system, b
   -  "jquery": "^3.3.1",
   -  "popper.js": "^1.14.6"
 
-## Specifications:
+#### 2. Specifications:
 
-  * Spec 0: Galacticalc class object instantiation verification
-- [ ] **Expect:** instantiation of a new Galacticalc object
-Input: let galacticalc = new Galacticalc();
-Output: galacticalc.message outputs 'SuperGalacticAgeCalculator is working.' 
+| Spec # 	| Description 	| Expectation 	| Input 	| Output 	|
+|---------	|--------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------	|-------------------------------------------------------------------------------------------------------------------------	|
+| 0 	| Galacticalc   class object instantiation verification 	| instantiation   of a new Galacticalc object 	| let   galacticalc = new Galacticalc(); 	| galacticalc.message   logs 'SuperGalacticAgeCalculator is working.' 	|
+| 1 	| Collect   the users birthday 	| A   javascript Date Object capturing the users birthday 	| "11/27/1980" 	| Galacticalc.birthday.getYear()   = 1980, Galacticalc.birthday.getMonth()+1 = 11,   Galacticalc.birthday.getDate() = 27  	|
+| 2 	| Calculate   the users age in Earth years 	| An   integer value representing the users age in Earth years 	| Galacticalc.birthday()   = "11/27/1980" 	| 38 	|
+| 3 	| Calculate   the users age in Mercury years 	| An   integer value representing the users age in Mercury years 	| Galacticalc.birthday()   = "11/27/1980" 	| 158 	|
+| 4 	| Calculate   the users age in Venus years 	| An   integer value representing the users age in Venus years 	| Galacticalc.birthday()   = "11/27/1980" 	| 61 	|
+| 5 	| Calculate   the users age in Mars years 	| An   integer value representing the users age in Mars years 	| Galacticalc.birthday()   = "11/27/1980" 	| 20 	|
+| 6 	| Calculate   the users age in Jupiter years 	| An   integer value representing the users age in Jupiter years 	| Galacticalc.birthday()   = "11/27/1980" 	| 3 	|
+| 7 	| Calculate   remaining life expectancy on Earth for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1980" 	| 47 	|
+| 8 	| Calculate   remaining life expectancy on Mercury for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1980" 	| 196 	|
+| 9 	| Calculate   remaining life expectancy on Venus for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1980" 	| 76 	|
+| 10 	| Calculate   remaining life expectancy on Mars for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1980" 	| 25 	|
+| 11 	| Calculate   remaining life expectancy on Jupiter for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1980" 	| 4 	|
+| 12 	| Calculate   remaining life expectancy on Earth for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1980" 	| 49 	|
+| 13 	| Calculate   remaining life expectancy on Mercury for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1980" 	| 375 	|
+| 14 	| Calculate   remaining life expectancy on Venus for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1980" 	| 79 	|
+| 15 	| Calculate   remaining life expectancy on Mars for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1980" 	| 26 	|
+| 16 	| Calculate   remaining life expectancy on Jupiter for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1980" 	| 4 	|
+| 17 	| Calculate   remaining life expectancy on Earth for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1928" 	| 5 	|
+| 18 	| Calculate   remaining life expectancy on Mercury for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1928" 	| 21 	|
+| 19 	| Calculate   remaining life expectancy on Venus for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1928" 	| 8 	|
+| 20 	| Calculate   remaining life expectancy on Mars for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1928" 	| 2 	|
+| 21 	| Calculate   remaining life expectancy on Jupiter for males 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 85 for males. 	| Galacticalc.birthday()   = "11/27/1928" 	| 0 	|
+| 22 	| Calculate   remaining life expectancy on Earth for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1928" 	| 3 	|
+| 23 	| Calculate   remaining life expectancy on Mercury for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1928" 	| 13 	|
+| 24 	| Calculate   remaining life expectancy on Venus for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1928" 	| 5 	|
+| 25 	| Calculate   remaining life expectancy on Mars for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1928" 	| 1 	|
+| 26 	| Calculate   remaining life expectancy on Jupiter for females 	| An   integer value representing the expected number of years to remain alive,   assuming an average life expectancy of 87 for females. 	| Galacticalc.birthday()   = "11/27/1928" 	| 0 	|
 
-  * Spec 1: Collect the users birthday
-- [ ] **Expect:** An integer value representing the users name in years 
-Input: 33 
-Output: 33 Earth years
-
-  * Spec 1: Collect the users birthday
-- [ ] **Expect:** An integer value representing the users name in years 
-Input: 33 
-Output: 33 Earth years
-
-  * Spec 2: Calculate the users age in Mercury years. (A Mercury year is .24 Earth years.)
-- [ ] **Expect:**  the users age in earth years
-Input: 33  
-Output: 137 Mercury years
-
-  * Spec 3: Calculate the users age in Venus years. (A Venus year is .62 Earth years.)
-- [ ] **Expect:**  the users age in earth years
-Input: 33  
-Output: 53 Venus years
-
-  * Spec 4: Calculate the users age in Mars years. (A Mars year is 1.88 Earth years.)
-- [ ] **Expect:**  the users age in earth years
-Input: 33  
-Output: 17 Mars Years
-
-  * Spec 5: Calculate the users age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
-- [ ] **Expect:**  the users age in earth years
-Input: 33
-Output: 2 Jupiter years
-
-  * Spec 6: Calculate the users remaining life expectancy on each planet. For males the average life expectancy in this project is assumed to be 85 years, while for women it's expected to be about 87 years.
-- [ ] **Expect:**  the users age in earth years
-Input: 33, male/female
-Output: 
-
-Here is your life expectancy for each planet.
-
-Male Outcome: As a male you can expect to live to 85 earth years, which would mean you'd have the following remaining years on each planet: 
-
-52 more local years on Earth
-217 more local years if you were living on Mercury
-84 more local years if you were living on Venus
-28 more local years if you were living on Mars
-5 more local years if you were living on Jupiter
-
-Female outcome: As a female you can expect to live to 87 earth years, which would mean you'd have the following remaining years on each planet: 
-
-54 more local years on Earth
-225 more local years if you were living on Mercury
-87 more local years if you were living on Venus
-29 more local years if you were living on Mars
-5 more local years if you were living on Jupiter
-
-  * Spec 7: If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy.
-- [ ] **Expect:**  the users age in earth years
-Input: 90
-Output: 
-Male Outcome: As a male, you have lived past the expected 85 earth years, here's how many years you've lived beyond the expectation on all the planets: 
-
-5 local years longer on Earth
-21 local years longer if you were living on Mercury
-8 local years longer if you were living on Venus
-2 local years longer if you were living on Mars
-0 local years longer if you were living on Jupiter
-
-Female outcome: As a female, you have lived past the expected 87 earth years, here's how many years you've lived beyond the expectation on all the planets: 
-
-3 local years longer on Earth
-13 local years longer if you were living on Mercury
-5 local years longer if you were living on Venus
-1 local years longer if you were living on Mars
-0 local years longer if you were living on Jupiter
-
-3. Integration
+#### 3. Integration
   * Index.Html - All activity is run on this page.
 
-4. Polish
+#### 4. Polish
   *
 
 
