@@ -74,4 +74,14 @@ describe('Galacticalc', function () {
 
         expect(testGalacticalcWithYoungBirthday.marsAge).toEqual(expectedResult);
     });
+
+    it('6. findJupiterAge should calculate the users age in Jupiter years', function () {
+        testGalacticalcWithYoungBirthday.findJupiterAge();
+
+        let today = new Date();
+        let expectedResult = today - testGalacticalcWithYoungBirthday.birthday;
+        expectedResult = Math.floor(expectedResult / 31536000000 / testGalacticalcWithYoungBirthday.jupiterRatio);
+
+        expect(testGalacticalcWithYoungBirthday.jupiterAge).toEqual(expectedResult);
+    });
 });

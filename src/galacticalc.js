@@ -45,6 +45,12 @@ class Galacticalc {
 
         this.marsAge = Math.floor(marsAge);
     }
+
+    findJupiterAge() {
+        let jupiterAge = Math.floor(this.findEarthAge() / this.jupiterRatio);
+
+        this.jupiterAge = Math.floor(jupiterAge);
+    }
 }
 
 export {
