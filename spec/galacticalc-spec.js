@@ -108,4 +108,41 @@ describe('Galacticalc', function () {
 
         expect(testGalacticalcWithYoungBirthday.mercuryYearsRemaining).toEqual(expectedResult);
     });
+
+    it('9. findVenusYearsExpectedToLive_Male should return the number of years left to live on Venus', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findVenusYearsExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.venusRatio);
+
+        expect(testGalacticalcWithYoungBirthday.venusYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('10. findMarsYearsExpectedToLive_Male should return the number of years left to live on Mars', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findMarsYearsExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.marsRatio);
+
+        expect(testGalacticalcWithYoungBirthday.marsYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('11. findJupiterYearsExpectedToLive_Male should return the number of years left to live on Jupiter', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findJupiterYearsExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.jupiterRatio);
+
+        expect(testGalacticalcWithYoungBirthday.jupiterYearsRemaining).toEqual(expectedResult);
+    });
+
 });

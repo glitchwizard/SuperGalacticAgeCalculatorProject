@@ -75,6 +75,23 @@ class Galacticalc {
         let mercuryYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.mercuryRatio);
         this.mercuryYearsRemaining = mercuryYearsRemainingToExistInTheUniverse;
     }
+
+    findVenusYearsExpectedToLive_Male() {
+        let venusYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.venusRatio);
+        this.venusYearsRemaining = venusYearsRemainingToExistInTheUniverse;
+    }
+
+    findMarsYearsExpectedToLive_Male() {
+        let marsYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.marsRatio);
+        this.marsYearsRemaining = marsYearsRemainingToExistInTheUniverse;
+    }
+
+    findJupiterYearsExpectedToLive_Male() {
+        let jupiterYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.jupiterRatio);
+        this.jupiterYearsRemaining = jupiterYearsRemainingToExistInTheUniverse;
+    }
+    
+
 }
 
 export {
