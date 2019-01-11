@@ -1,8 +1,19 @@
-import { TestClass } from './../src/testclass';
+import { Galacticalc } from './../src/Galacticalc';
 
-describe('TestClass', function() {
-  it('getMessage should return message', function() {
-    let testClass = new TestClass();
-    expect(testClass.getMessage()).toEqual('SuperGalacticAgeCalculator is working.');
+describe('Galacticalc', function() {
+
+  let testGalacticalc;
+  beforeEach(function() {
+    testGalacticalc = new Galacticalc();
   });
+
+
+  it('if properly instantiated, messageProperty should return message', function() {
+    expect(testGalacticalc.message).toEqual('SuperGalacticAgeCalculator is working.');
+  });
+
+  // it('should update the earth age property', function () {
+    
+  // })
 });
+
