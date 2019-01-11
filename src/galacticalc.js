@@ -11,6 +11,11 @@ class Galacticalc {
         this.VenusYearsRemaining;
         this.marsYearsRemaining;
         this.jupiterYearsRemaining;
+        this.earthYearsBeyondExpectedDeath;
+        this.mercuryYearsBeyondExpectedDeath;
+        this.VenusYearsBeyondExpectedDeath;
+        this.marsYearsBeyondExpectedDeath;
+        this.jupiterYearsBeyondExpectedDeath;
         this.gender;
         this.mercuryRatio = 0.24;
         this.venusRatio = 0.62;
@@ -66,7 +71,7 @@ class Galacticalc {
         let today = new Date();
         let predictedDeathDateRaw = (predictedDeathDate - today) / 31536000000;
         let earthYearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
-        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse
+        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse;
         return predictedDeathDateRaw;
     }
 
@@ -96,7 +101,7 @@ class Galacticalc {
         let today = new Date();
         let predictedDeathDateRaw = (predictedDeathDate - today) / 31536000000;
         let earthYearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
-        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse
+        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse;
 
         return predictedDeathDateRaw;
     }
@@ -120,6 +125,17 @@ class Galacticalc {
         let jupiterYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Female() / this.jupiterRatio);
         this.jupiterYearsRemaining = jupiterYearsRemainingToExistInTheUniverse;
     }
+
+    findEarthYearsBeyondWhatWasExpectedToLive_Male() {
+        let predictedDeathDateInMS = this.birthday.getTime() + this.maleLifeSpanInMilliseconds;
+        let predictedDeathDate = new Date(predictedDeathDateInMS);
+        let today = new Date();
+        let predictedDeathDateRaw = (predictedDeathDate - today) / 31536000000;
+        let earthYearsBeyondDeathDate = Math.floor((predictedDeathDate - today) / 31536000000);
+        this.earthYearsBeyondExpectedDeath = -earthYearsBeyondDeathDate;
+        return predictedDeathDateRaw;
+    }
+
 }
 
 export {

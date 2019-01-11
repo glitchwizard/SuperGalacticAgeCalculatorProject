@@ -15,7 +15,7 @@ describe('Galacticalc', function () {
       testGalacticalcWithYoungBirthday.birthday = new Date('11/27/1980');
 
       testGalacticalcWithOldBirthday = new Galacticalc();
-      testGalacticalcWithOldBirthday.birthday = new Date('11/27/1980');
+      testGalacticalcWithOldBirthday.birthday = new Date('11/27/1930');
   });
 
 
@@ -203,6 +203,19 @@ describe('Galacticalc', function () {
         let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.jupiterRatio);
 
         expect(testGalacticalcWithYoungBirthday.jupiterYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('17. findEarthYearsBeyondWhatWasExpectedToLive_Male should return the number of years beyond what was expected to live on Earth', function () {
+
+        let testResult = testGalacticalcWithOldBirthday.findEarthYearsBeyondWhatWasExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithOldBirthday.birthday.getTime() + testGalacticalcWithOldBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = -Math.floor((predictedDeathDate - today) / 31536000000);
+
+        expect(testGalacticalcWithOldBirthday.earthYearsBeyondExpectedDeath).toEqual(expectedResult);
     });
 
 });
