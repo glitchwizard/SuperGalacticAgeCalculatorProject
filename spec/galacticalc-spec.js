@@ -37,9 +37,7 @@ describe('Galacticalc', function () {
     });
 
     it('2. findEarthAge should calculate the users age in Earth years', function () {
-
         testGalacticalcWithYoungBirthday.findEarthAge();
-
         let today = new Date();
         let expectedResult = today - testGalacticalcWithYoungBirthday.birthday;
         expectedResult = Math.floor(expectedResult / 31536000000);
@@ -47,15 +45,23 @@ describe('Galacticalc', function () {
         expect(testGalacticalcWithYoungBirthday.earthAge).toEqual(expectedResult);
     });
 
-    it('3. findEarthAge should calculate the users age in Earth years', function () {
-
-        testGalacticalcWithYoungBirthday.findEarthAge();
+    it('3. findMercuryAge should calculate the users age in Mercury years', function () {
+        testGalacticalcWithYoungBirthday.findMercuryAge();
 
         let today = new Date();
         let expectedResult = today - testGalacticalcWithYoungBirthday.birthday;
-        expectedResult = Math.floor(expectedResult / 31536000000);
+        expectedResult = Math.floor(expectedResult / 31536000000 / testGalacticalcWithYoungBirthday.mercuryRatio);
 
-        expect(testGalacticalcWithYoungBirthday.earthAge).toEqual(expectedResult);
+        expect(testGalacticalcWithYoungBirthday.mercuryAge).toEqual(expectedResult);
     });
 
+    it('4. findVenusAge should calculate the users age in Venus years', function () {
+        testGalacticalcWithYoungBirthday.findVenusAge();
+
+        let today = new Date();
+        let expectedResult = today - testGalacticalcWithYoungBirthday.birthday;
+        expectedResult = Math.floor(expectedResult / 31536000000 / testGalacticalcWithYoungBirthday.venusRatio);
+
+        expect(testGalacticalcWithYoungBirthday.venusAge).toEqual(expectedResult);
+    });
 });

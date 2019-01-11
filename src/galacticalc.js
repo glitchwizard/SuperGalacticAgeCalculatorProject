@@ -19,18 +19,27 @@ class Galacticalc {
     }
 
     findEarthAge() {
+
         let todaysDate = new Date();
         let foundEarthAgeMs = todaysDate - this.birthday
-        foundEarthAge = Math.floor(foundEarthAgeMs/31536000000);
+        let foundEarthAge = Math.floor(foundEarthAgeMs/31536000000);
         this.earthAge = foundEarthAge;
         return foundEarthAgeMs;
     }
 
     findMercuryAge() {
-        debugger;
-        let mercuryAge = this.findEarthAge() / this.mercuryRatio;
+        let mercuryAge = Math.floor(this.findEarthAge() / this.mercuryRatio / 31536000000);
+
         this.mercuryAge = Math.floor(mercuryAge);
     }
+
+    findVenusAge() {
+        let venusAge = Math.floor(this.findEarthAge() / this.venusRatio / 31536000000);
+
+        this.venusAge = Math.floor(venusAge);
+    }
+
+
 }
 
 export {
