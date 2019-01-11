@@ -85,7 +85,7 @@ describe('Galacticalc', function () {
         expect(testGalacticalcWithYoungBirthday.jupiterAge).toEqual(expectedResult);
     });
 
-    it('7. FindEarthYearsExpectedToLive_Male should return the number of years left to live', function () {
+    it('7. findEarthYearsExpectedToLive_Male should return the number of years left to live on Earth', function () {
         let testResult = testGalacticalcWithYoungBirthday.findEarthYearsExpectedToLive_Male();
 
         let today = new Date();
@@ -94,6 +94,18 @@ describe('Galacticalc', function () {
 
         let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000);
 
-        expect(testResult).toEqual(expectedResult);
+        expect(testGalacticalcWithYoungBirthday.earthYearsRemaining).toEqual(expectedResult);
     })
+
+    it('8. findMercuryYearsExpectedToLive_Male should return the number of years left to live on Mercury', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findMercuryYearsExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.mercuryRatio);
+
+        expect(testGalacticalcWithYoungBirthday.mercuryYearsRemaining).toEqual(expectedResult);
+    });
 });

@@ -6,6 +6,11 @@ class Galacticalc {
         this.VenusAge;
         this.marsAge;
         this.jupiterAge;
+        this.earthYearsRemaining;
+        this.mercuryYearsRemaining;
+        this.VenusYearsRemaining;
+        this.marsYearsRemaining;
+        this.jupiterYearsRemaining;
         this.gender;
         this.mercuryRatio = 0.24;
         this.venusRatio = 0.62;
@@ -35,33 +40,40 @@ class Galacticalc {
     findMercuryAge() {
         let mercuryAge = Math.floor(this.findEarthAge() / this.mercuryRatio);
 
-        this.mercuryAge = Math.floor(mercuryAge);
+        this.mercuryAge = mercuryAge;
     }
 
     findVenusAge() {
         let venusAge = Math.floor(this.findEarthAge() / this.venusRatio);
 
-        this.venusAge = Math.floor(venusAge);
+        this.venusAge = venusAge;
     }
 
     findMarsAge() {
         let marsAge = Math.floor(this.findEarthAge() / this.marsRatio);
 
-        this.marsAge = Math.floor(marsAge);
+        this.marsAge = marsAge;
     }
 
     findJupiterAge() {
         let jupiterAge = Math.floor(this.findEarthAge() / this.jupiterRatio);
 
-        this.jupiterAge = Math.floor(jupiterAge);
+        this.jupiterAge = jupiterAge;
     }
 
     findEarthYearsExpectedToLive_Male() {
         let predictedDeathDateInMS = this.birthday.getTime() + this.maleLifeSpanInMilliseconds;
         let predictedDeathDate = new Date(predictedDeathDateInMS);
         let today = new Date();
-        let yearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
-        return yearsRemainingToExistInTheUniverse;
+        let predictedDeathDateRaw = (predictedDeathDate - today) / 31536000000;
+        let earthYearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
+        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse
+        return predictedDeathDateRaw;
+    }
+
+    findMercuryYearsExpectedToLive_Male() {
+        let mercuryYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.mercuryRatio);
+        this.mercuryYearsRemaining = mercuryYearsRemainingToExistInTheUniverse;
     }
 }
 
