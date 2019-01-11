@@ -12,8 +12,9 @@ describe('Galacticalc', function() {
     expect(testGalacticalc.message).toEqual('SuperGalacticAgeCalculator is working.');
   });
 
-  // it('should update the earth age property', function () {
-    
-  // })
+  it('should update the earth age property after user input is collected', function () {
+      testGalacticalc.earthAge = 33;
+      expect(testGalacticalc.earthAge).toEqual(33);
+  })
 });
 

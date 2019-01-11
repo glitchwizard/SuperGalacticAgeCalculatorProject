@@ -56,6 +56,12 @@ This is a calculator that can calculate your galactic age in the solar system, b
   -  "popper.js": "^1.14.6"
 
 ## Specifications:
+
+  * Spec 0: Galacticalc class object instantiation verification
+- [ ] **Expect:** instantiation of a new Galacticalc object
+Input: let galacticalc = new Galacticalc();
+Output: galacticalc.message outputs 'SuperGalacticAgeCalculator is working.' 
+
   * Spec 1: Collect the users age, in years
 - [ ] **Expect:** An integer value representing the users name in years 
 Input: 33 
