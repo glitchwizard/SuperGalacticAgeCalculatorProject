@@ -6,7 +6,7 @@ class Galacticalc {
     this.VenusAge;
     this.marsAge;
     this.jupiterAge;
-    this.message = 'SuperGalacticAgeCalculator is working!.'
+    this.message = 'SuperGalacticAgeCalculator is working.'
   }
 
   
