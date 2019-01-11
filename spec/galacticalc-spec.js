@@ -64,4 +64,14 @@ describe('Galacticalc', function () {
 
         expect(testGalacticalcWithYoungBirthday.venusAge).toEqual(expectedResult);
     });
+
+    it('5. findMarsAge should calculate the users age in Mars years', function () {
+        testGalacticalcWithYoungBirthday.findMarsAge();
+
+        let today = new Date();
+        let expectedResult = today - testGalacticalcWithYoungBirthday.birthday;
+        expectedResult = Math.floor(expectedResult / 31536000000 / testGalacticalcWithYoungBirthday.marsRatio);
+
+        expect(testGalacticalcWithYoungBirthday.marsAge).toEqual(expectedResult);
+    });
 });
