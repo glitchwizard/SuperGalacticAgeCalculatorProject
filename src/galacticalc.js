@@ -11,8 +11,12 @@ class Galacticalc {
         this.venusRatio = 0.62;
         this.marsRatio = 1.88;
         this.jupiterRatio = 11.86;
+        this.maleLifeSpanInMilliseconds = 85 * 31536000000;
+        this.femaleLifeSpanInMilliseconds = 85 * 31536000000;
         this.message = 'SuperGalacticAgeCalculator is working.'
     }
+
+    // 31536000000 in a year
 
     setBirthday(birthdayString) {
         this.birthday = new Date(birthdayString);
@@ -50,6 +54,15 @@ class Galacticalc {
         let jupiterAge = Math.floor(this.findEarthAge() / this.jupiterRatio);
 
         this.jupiterAge = Math.floor(jupiterAge);
+    }
+
+    findEarthYearsExpectedToLive_Male() {
+        let predictedDeathDateInMS = this.birthday.getMilliseconds() + this.maleLifeSpanInMilliseconds;
+        let predictedDeathDate = new Date();
+        predictedDeathDate.SetTime()
+        let today = new Date();
+        let yearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
+        return 0;//yearsRemainingToExistInTheUniverse;
     }
 }
 

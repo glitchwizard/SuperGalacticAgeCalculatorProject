@@ -84,4 +84,17 @@ describe('Galacticalc', function () {
 
         expect(testGalacticalcWithYoungBirthday.jupiterAge).toEqual(expectedResult);
     });
+
+    it('7. FindEarthYearsExpectedToLive_Male should return the number of years left to live', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findEarthYearsExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getMilliseconds() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+        let deathDateMS = predictedDeathDate.getMilliseconds()
+        let todayMS = today.getMilliseconds();
+        let expectedResult = Math.floor((deathDateMS - todayMS) / 31536000000);
+
+        expect(testResult).toEqual(expectedResult);
+    })
 });
