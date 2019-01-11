@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 let newTest = new Galacticalc();
-const message = newTest.getMessage();
+const message = newTest.message();
 
 $(document).ready(function() {
   $('#displayMessage').append(message);
