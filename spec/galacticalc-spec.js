@@ -90,10 +90,9 @@ describe('Galacticalc', function () {
 
         let today = new Date();
 
-        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getMilliseconds() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
-        let deathDateMS = predictedDeathDate.getMilliseconds()
-        let todayMS = today.getMilliseconds();
-        let expectedResult = Math.floor((deathDateMS - todayMS) / 31536000000);
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000);
 
         expect(testResult).toEqual(expectedResult);
     })

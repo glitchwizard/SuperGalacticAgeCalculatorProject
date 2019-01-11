@@ -57,12 +57,11 @@ class Galacticalc {
     }
 
     findEarthYearsExpectedToLive_Male() {
-        let predictedDeathDateInMS = this.birthday.getMilliseconds() + this.maleLifeSpanInMilliseconds;
-        let predictedDeathDate = new Date();
-        predictedDeathDate.SetTime()
+        let predictedDeathDateInMS = this.birthday.getTime() + this.maleLifeSpanInMilliseconds;
+        let predictedDeathDate = new Date(predictedDeathDateInMS);
         let today = new Date();
         let yearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
-        return 0;//yearsRemainingToExistInTheUniverse;
+        return yearsRemainingToExistInTheUniverse;
     }
 }
 
