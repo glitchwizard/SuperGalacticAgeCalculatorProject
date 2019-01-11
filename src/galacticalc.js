@@ -136,6 +136,13 @@ class Galacticalc {
         return predictedDeathDateRaw;
     }
 
+    findMercuryYearsBeyondWhatWasExpectedToLive_Male() {
+        let mercuryYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsBeyondWhatWasExpectedToLive_Male() / this.mercuryRatio);
+        this.mercuryYearsBeyondExpectedDeath = -mercuryYearsRemainingToExistInTheUniverse;
+    }
+
+
+
 }
 
 export {

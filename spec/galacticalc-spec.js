@@ -218,4 +218,18 @@ describe('Galacticalc', function () {
         expect(testGalacticalcWithOldBirthday.earthYearsBeyondExpectedDeath).toEqual(expectedResult);
     });
 
+    it('17. findMercuryYearsBeyondWhatWasExpectedToLive_Male should return the number of years beyond what was expected to live on Mercury', function () {
+
+        let testResult = testGalacticalcWithOldBirthday.findMercuryYearsBeyondWhatWasExpectedToLive_Male();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithOldBirthday.birthday.getTime() + testGalacticalcWithOldBirthday.maleLifeSpanInMilliseconds);
+
+        let expectedResult = -Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithOldBirthday.mercuryRatio);
+
+        expect(testGalacticalcWithOldBirthday.mercuryYearsBeyondExpectedDeath).toEqual(expectedResult);
+    });
+
+
 });
