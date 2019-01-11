@@ -14,13 +14,22 @@ class Galacticalc {
         this.message = 'SuperGalacticAgeCalculator is working.'
     }
 
-    getBirthday(birthdayString) {
+    setBirthday(birthdayString) {
         this.birthday = new Date(birthdayString);
     }
 
     findEarthAge() {
-        let thisYear = new Date.now().getFullYear();
-            this.earthAge = thisYear - this.birthday.getFullYear();
+        let todaysDate = new Date();
+        let foundEarthAgeMs = todaysDate - this.birthday
+        foundEarthAge = Math.floor(foundEarthAgeMs/31536000000);
+        this.earthAge = foundEarthAge;
+        return foundEarthAgeMs;
+    }
+
+    findMercuryAge() {
+        debugger;
+        let mercuryAge = this.findEarthAge() / this.mercuryRatio;
+        this.mercuryAge = Math.floor(mercuryAge);
     }
 }
 
