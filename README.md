@@ -62,7 +62,12 @@ This is a calculator that can calculate your galactic age in the solar system, b
 Input: let galacticalc = new Galacticalc();
 Output: galacticalc.message outputs 'SuperGalacticAgeCalculator is working.' 
 
-  * Spec 1: Collect the users age, in years
+  * Spec 1: Collect the users birthday
+- [ ] **Expect:** An integer value representing the users name in years 
+Input: 33 
+Output: 33 Earth years
+
+  * Spec 1: Collect the users birthday
 - [ ] **Expect:** An integer value representing the users name in years 
 Input: 33 
 Output: 33 Earth years
