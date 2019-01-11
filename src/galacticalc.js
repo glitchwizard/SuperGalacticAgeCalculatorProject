@@ -90,6 +90,38 @@ class Galacticalc {
         let jupiterYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Male() / this.jupiterRatio);
         this.jupiterYearsRemaining = jupiterYearsRemainingToExistInTheUniverse;
     }
+
+    findEarthYearsExpectedToLive_Female() {
+        let predictedDeathDateInMS = this.birthday.getTime() + this.femaleLifeSpanInMilliseconds;
+        let predictedDeathDate = new Date(predictedDeathDateInMS);
+        let today = new Date();
+        let predictedDeathDateRaw = (predictedDeathDate - today) / 31536000000;
+        let earthYearsRemainingToExistInTheUniverse = Math.floor((predictedDeathDate - today) / 31536000000);
+        this.earthYearsRemaining = earthYearsRemainingToExistInTheUniverse
+        return predictedDeathDateRaw;
+    }
+
+    findMercuryYearsExpectedToLive_Female() {
+        let mercuryYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Female() / this.mercuryRatio);
+        this.mercuryYearsRemaining = mercuryYearsRemainingToExistInTheUniverse;
+    }
+
+    findVenusYearsExpectedToLive_Female() {
+        let venusYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Female() / this.venusRatio);
+        this.venusYearsRemaining = venusYearsRemainingToExistInTheUniverse;
+    }
+
+    findMarsYearsExpectedToLive_Female() {
+        let marsYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Female() / this.marsRatio);
+        this.marsYearsRemaining = marsYearsRemainingToExistInTheUniverse;
+    }
+
+    findJupiterYearsExpectedToLive_Female() {
+        let jupiterYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsExpectedToLive_Female() / this.jupiterRatio);
+        this.jupiterYearsRemaining = jupiterYearsRemainingToExistInTheUniverse;
+    }
+
+
     
 
 }

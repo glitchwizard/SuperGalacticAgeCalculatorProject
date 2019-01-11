@@ -145,4 +145,64 @@ describe('Galacticalc', function () {
         expect(testGalacticalcWithYoungBirthday.jupiterYearsRemaining).toEqual(expectedResult);
     });
 
+    it('12. findEarthYearsExpectedToLive_Female should return the number of years left to live on Earth', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findEarthYearsExpectedToLive_Female();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.femaleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000);
+
+        expect(testGalacticalcWithYoungBirthday.earthYearsRemaining).toEqual(expectedResult);
+    })
+
+    it('13. findMercuryYearsExpectedToLive_Female should return the number of years left to live on Mercury', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findMercuryYearsExpectedToLive_Female();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.femaleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.mercuryRatio);
+
+        expect(testGalacticalcWithYoungBirthday.mercuryYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('14. findVenusYearsExpectedToLive_Female should return the number of years left to live on Venus', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findVenusYearsExpectedToLive_Female();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.femaleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.venusRatio);
+
+        expect(testGalacticalcWithYoungBirthday.venusYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('15. findMarsYearsExpectedToLive_Female should return the number of years left to live on Mars', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findMarsYearsExpectedToLive_Female();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.femaleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.marsRatio);
+
+        expect(testGalacticalcWithYoungBirthday.marsYearsRemaining).toEqual(expectedResult);
+    });
+
+    it('16. findJupiterYearsExpectedToLive_Female should return the number of years left to live on Jupiter', function () {
+        let testResult = testGalacticalcWithYoungBirthday.findJupiterYearsExpectedToLive_Female();
+
+        let today = new Date();
+
+        let predictedDeathDate = new Date(testGalacticalcWithYoungBirthday.birthday.getTime() + testGalacticalcWithYoungBirthday.femaleLifeSpanInMilliseconds);
+
+        let expectedResult = Math.floor((predictedDeathDate - today) / 31536000000 / testGalacticalcWithYoungBirthday.jupiterRatio);
+
+        expect(testGalacticalcWithYoungBirthday.jupiterYearsRemaining).toEqual(expectedResult);
+    });
+
 });
