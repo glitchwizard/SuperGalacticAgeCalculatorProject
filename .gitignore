@@ -5,3 +5,5 @@ dist/
 *.sqlite
 *.suo
 /src/~$SpecSpreadsheet.xlsx
+obj/
+bin/

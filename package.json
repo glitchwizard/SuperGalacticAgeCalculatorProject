@@ -1,13 +1,13 @@
 {
   "name": "SuperGalacticAgeCalculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This will calculate your galactic age on different planets in the Sol solar system.",
   "main": "index.js",
   "scripts": {
+    "test": "karma start karma.conf.js",
     "build": "webpack --mode development",
-    "start": "npm run build; webpack-dev-server --open",
-    "lint": "eslint src/*.js",
-    "test": "karma start karma.conf.js"
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js"
   },
   "keywords": [],
   "author": "",
