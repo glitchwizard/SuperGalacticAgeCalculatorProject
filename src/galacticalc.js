@@ -141,6 +141,20 @@ class Galacticalc {
         this.mercuryYearsBeyondExpectedDeath = -mercuryYearsRemainingToExistInTheUniverse;
     }
 
+    findVenusYearsBeyondWhatWasExpectedToLive_Male() {
+        let venusYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsBeyondWhatWasExpectedToLive_Male() / this.venusRatio);
+        this.venusYearsBeyondExpectedDeath = -venusYearsRemainingToExistInTheUniverse;
+    }
+
+    findMarsYearsBeyondWhatWasExpectedToLive_Male() {
+        let marsYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsBeyondWhatWasExpectedToLive_Male() / this.marsRatio);
+        this.marsYearsBeyondExpectedDeath = -marsYearsRemainingToExistInTheUniverse;
+    }
+
+    findJupiterYearsBeyondWhatWasExpectedToLive_Male() {
+        let jupiterYearsRemainingToExistInTheUniverse = Math.floor(this.findEarthYearsBeyondWhatWasExpectedToLive_Male() / this.jupiterRatio);
+        this.jupiterYearsBeyondExpectedDeath = -jupiterYearsRemainingToExistInTheUniverse;
+    }
 
 
 }
